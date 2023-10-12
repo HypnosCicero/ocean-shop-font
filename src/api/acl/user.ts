@@ -1,12 +1,12 @@
 import request from '@/utils/request'
 
 const api_name = '/admin/acl/user' //TODO 为什么会有这个路径？
-const api_name_test='/admin/acl/index'
+const api_name_test='/admin/acl/index' //TODO 可能需要修改这连个路径
 
 /*
 登陆
 */
-export function login(data:JSON) {
+export function login(data: JSON) {
   return request({
     url: `${api_name_test}/login`,
     method: 'post',
@@ -48,7 +48,7 @@ export function getMenu() {
 /*
 获取后台用户分页列表(带搜索)
 */
-export function getPageList( page: selectType, limit: selectType, searchObj:JSON) {
+export function getPageList(page: selectType, limit: selectType, searchObj: JSON) {
   return request({
     url: `${api_name}/${page}/${limit}`,
     method: 'get',
@@ -59,7 +59,7 @@ export function getPageList( page: selectType, limit: selectType, searchObj:JSON
 /*
 根据ID获取某个后台用户
 */
-export function getById( id: argsType ) {
+export function getById(id: argsType) {
   return request({
     url: `${api_name}/get/${id}`,
     method: 'get'
@@ -69,7 +69,7 @@ export function getById( id: argsType ) {
 /*
 保存一个新的后台用户
 */
-export function add( user: JSON ) {
+export function add(user: JSON) {
   return request({
     url: `${api_name}/save`,
     method: 'post',
@@ -80,7 +80,7 @@ export function add( user: JSON ) {
 /*
 更新一个后台用户
 */
-export function update( user: JSON) {
+export function update(user: JSON) {
   return request({
     url: `${api_name}/update`,
     method: 'put',
@@ -91,7 +91,7 @@ export function update( user: JSON) {
 /*
 获取某个用户的所有角色
 */
-export function getRoles( adminId: argsType ) {
+export function getRoles(adminId: argsType) {
   return request({
     url: `${api_name}/toAssign/${adminId}`,
     method: 'get'
@@ -102,7 +102,7 @@ export function getRoles( adminId: argsType ) {
 给某个用户分配角色
 roleId的结构: 字符串, 'rId1,rId2,rId3'
 */
-export function assignRoles( adminId: argsType, roleId: argsType ) {
+export function assignRoles(adminId: argsType, roleId: argsType) {
   return request({
     url: `${api_name}/doAssign`,
     method: 'post',
@@ -116,7 +116,7 @@ export function assignRoles( adminId: argsType, roleId: argsType ) {
 /*
 删除某个用户
 */
-export function removeById( id: argsType ) {
+export function removeById(id: argsType) {
   return request({
     url: `${api_name}/remove/${id}`,
     method: 'delete'
@@ -127,7 +127,7 @@ export function removeById( id: argsType ) {
 批量删除多个用户
 ids的结构: ids是包含n个id的数组
 */
-export function removeUsers( ids:Array<number> ) {
+export function removeUsers(ids: Array<number>) { //TODO　这里需要进行查看后端是否也是数组类型。
   return request({
     url: `${api_name}/batchRemove`,
     method: 'delete',
