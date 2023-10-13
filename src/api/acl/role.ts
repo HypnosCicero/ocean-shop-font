@@ -10,7 +10,7 @@ export default {
   /* 
   获取角色分页列表(带搜索)
   */
-  getPageList( page: selectType, limit: selectType, searchObj: JSON ) {
+  getPageList(page: selectType, limit: selectType, searchObj: selectObjectType) {
     return request({
       url: `${api_name}/${page}/${limit}`,
       method: 'get',
@@ -21,7 +21,7 @@ export default {
     /* 
   保存一个新角色
   */
-  save( role:JSON ) {
+  save(role: JSON) {
     return request({
       url: `${api_name}/save`,
       method: 'post',
@@ -32,7 +32,7 @@ export default {
   /* 
   获取某个角色
   */
-  getById( id:argsType ) {
+  getById(id: argsType) {
     return request({
       url: `${api_name}/get/${id}`,
       method: 'get'
@@ -44,7 +44,7 @@ export default {
   /* 
   更新一个角色
   */
-  updateById( role: JSON ) {
+  updateById(role: JSON) {
     return request({
       url: `${api_name}/update`,
       method: 'put',
@@ -55,7 +55,7 @@ export default {
   /* 
   获取一个角色的所有权限列表
   */
-  getAssign( roleId: argsType ) {
+  getAssign(roleId: argsType) {
     return request({
       url: `${api_name}/toAssign/${roleId}`,
       method: 'get'
@@ -65,7 +65,7 @@ export default {
   /* 
   删除某个角色
   */
-  removeById( id: argsType ) {
+  removeById(id: argsType) {
     return request({
       url: `${api_name}/remove/${id}`,
       method: 'delete'
@@ -75,7 +75,7 @@ export default {
   /* 
   批量删除多个角色
   */
-  removeRoles( ids: Array<number> ) {
+  removeRoles(ids: Array<number>) {
     return request({
       url: `${api_name}/batchRemove`,
       method: 'delete',

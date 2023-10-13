@@ -16,7 +16,7 @@ export default {
     /* 
       删除一个权限
     */
-    removePermission( id:string | number ) {
+    removePermission(id: argsType) {
         return request({
             url: `${api_name}/remove/${id}`,
             method: 'delete'
@@ -26,7 +26,7 @@ export default {
     /* 
       保存一个权限项
     */
-    addPermission( permission: JSON ) {
+    addPermission(permission: JSON) {
         return request({
             url: `${api_name}/save`,
             method: "post",
@@ -37,7 +37,7 @@ export default {
     /* 
        更新一个权限项
     */
-    updatePermission(permission:JSON) {
+    updatePermission(permission: JSON) {
         return request({
             url: `${api_name}/update`,
             method: "put",
@@ -48,7 +48,7 @@ export default {
     /* 
       查看某个角色的权限列表 
     */
-    toAssign(roleId: string | number ) {
+    toAssign(roleId: argsType) {
         return request({
             url: `${api_name}/toAssign/${roleId}`,
             method: "get"
@@ -58,7 +58,7 @@ export default {
     /* 
        给某个角色授权
      */
-    doAssign( roleId:string | number, permissionId:string | number) {
+    doAssign(roleId: argsType, permissionId: argsType) {
         return request({
             url: `${api_name}/doAssign`,
             method: "post",

@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from '@/utils/request';
 
 const api_name = '/admin/activity/couponInfo'; //TODO　还是需要查看后端的路径
 

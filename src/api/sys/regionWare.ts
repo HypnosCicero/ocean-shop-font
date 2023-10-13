@@ -4,7 +4,7 @@ const api_name = '/admin/sys/regionWare'; //TODO 后端路径
 
 export default {
 
-  getPageList(page: selectType, limit: selectType,searchObj: selectObjectType) {
+  getPageList(page: selectType, limit: selectType, searchObj: selectObjectType) {
     return request({
       url: `${api_name}/${page}/${limit}`,
       method: 'get',

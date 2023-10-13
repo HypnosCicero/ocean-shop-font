@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from '@/utils/request';
 
 const api_name = '/admin/activity/seckillTime'; //TODO 后端路径
 

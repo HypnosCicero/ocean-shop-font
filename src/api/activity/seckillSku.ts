@@ -1,10 +1,10 @@
-import request from '@/utils/request'
+import request from '@/utils/request';
 
 const api_name = '/admin/activity/seckillSku'; //TODO 后端路径
 
 export default {
 
-  getPageList(page: selectType, limit: selectType, searchObj: JSON) {
+  getPageList(page: selectType, limit: selectType, searchObj: selectObjectType) {
     return request({
       url: `${api_name}/${page}/${limit}`,
       method: 'get',
